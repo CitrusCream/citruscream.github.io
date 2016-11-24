@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+<article>
+	<header class="post-header">
+		<h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+		<p class="date">Posted on {{ post.date | date: "%d-%m-%Y" }}</p>
+		<hr>
+	</header>
+	{% if post.img %}
+	<img src="{{ site.url }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_right">
+	{% endif %}
+	{{ post.content }}
+	<ul class="tags">
+		<li class="tag">{{ post.category }}</li>
+	</ul>
+</article>
+{% endfor %}

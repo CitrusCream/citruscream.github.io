@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article>
+	<header class="post-header">
+		<h2>{{ page.title }}</h2>
+		<p class="date">Posted on {{ page.date | date: "%d-%m-%Y" }}</p>
+		<hr>
+	</header>
+	{% if page.img %}
+	<img src="{{ site.url }}{{ page.img }}" alt="{{ page.img_alt }}" class="post-image post-image_right">
+	{% endif %}
+	{{ content }}
+</article>

@@ -1,0 +1,45 @@
+title: Citrus Cream
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "file:///E:/_Work/jekyllcitrus/_site" # the base hostname & protocol for your site, e.g. http://example.com
+
+permalink: none
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+defaults:
+  -
+    scope:
+      path: "categories"
+      type: "posts"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "categories/john-doe"
+      type: "posts"
+    values:
+      category: "John Doe"
+  -
+    scope:
+      path: "categories/la-music"
+      type: "posts"
+    values:
+      category: "La Musique"
+  -
+    scope:
+      path: "categories/lampovo"
+      type: "posts"
+    values:
+      category: "Lampovo"
+  -
+    scope:
+      path: "categories/nyanyan"
+      type: "posts"
+    values:
+      category: "Nyanyan"
