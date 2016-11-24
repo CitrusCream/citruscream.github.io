@@ -1,6 +1,6 @@
 title: Citrus Cream
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/CitrusCream/citruscream.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://citruscream.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: none
 
