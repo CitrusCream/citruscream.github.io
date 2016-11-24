@@ -13,3 +13,6 @@ a.more {
 	padding: 3px 5px;
 	color: #333;
 }
+.post-header {
+	width: calc(100% - 310px);
+}
