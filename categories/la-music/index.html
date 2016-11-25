@@ -6,7 +6,7 @@ category: La Musique
 <article>
 	<header class="post-header">
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		<p class="date">Posted on {{ post.date | date: "%d-%m-%Y" }} in <span class="category">{{ page.category }}</p>
+		<p class="date">Posted on {{ post.date | date: "%d-%m-%Y" }} in <span class="category this-category">{{ page.category }}</p>
 		<hr>
 	</header>
 	{% if post.img %}
