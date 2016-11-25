@@ -6,15 +6,15 @@ category: La Musique
 <article>
 	<header class="post-header">
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		<p class="date">Posted on {{ post.date | date: "%d-%m-%Y" }} in <span class="category">{{ page.category }}&nbsp;<i class="fa fa-tag" aria-hidden="true"></i></span></p>
+		<p class="date">Posted on {{ post.date | date: "%d-%m-%Y" }} in <span class="category">{{ page.category }} <i class="fa fa-tag" aria-hidden="true"></i></span></p>
 		<hr>
 	</header>
 	{% if post.img %}
-	{% if post.full-img %}
-	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_full"></a>
-	{% else %}
-	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_right"></a>
-	{% endif %}
+  {% if post.full-img %}
+  <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_full"></a>
+  {% else %}
+	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_right{% if post.full-img %} post-image_full{% endif %}"></a>
+  {% endif %}
 	{% endif %}
 	{{ post.content }}
 </article>
