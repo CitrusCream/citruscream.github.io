@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	{% include header.html %}
+	<div class="content container-fluid">
+		<main class="col-md-8">
+			{{ content }}
+		</main>
+		<aside class="col-md-4 hidden-sm hidden-xs">
+			{% if page.img %}
+			<img src="{{ site.baseurl }}{{ page.img }}" alt="{{ page.img_alt }}" class="post-image post-image_aside">
+			{% endif %}
+			<nav class="navigation">
+				<ul>
+					{% if page.category == 'John Doe' %}
+					<li><a href="{{ site.baseurl }}/categories/john-doe" class="active">John Doe</a></li>
+					<li><a href="{{ site.baseurl }}/categories/la-music">La Musique</a></li>
+					<li><a href="{{ site.baseurl }}/categories/lampovo">Lampovo</a></li>
+					<li><a href="{{ site.baseurl }}/categories/nyanyan">Nyanyan</a></li>
+					{% elsif page.category == 'La Musique' %}
+					<li><a href="{{ site.baseurl }}/categories/john-doe">John Doe</a></li>
+					<li><a href="{{ site.baseurl }}/categories/la-music" class="active">La Musique</a></li>
+					<li><a href="{{ site.baseurl }}/categories/lampovo">Lampovo</a></li>
+					<li><a href="{{ site.baseurl }}/categories/nyanyan">Nyanyan</a></li>
+					{% elsif page.category == 'Lampovo' %}
+					<li><a href="{{ site.baseurl }}/categories/john-doe">John Doe</a></li>
+					<li><a href="{{ site.baseurl }}/categories/la-music">La Musique</a></li>
+					<li><a href="{{ site.baseurl }}/categories/lampovo" class="active">Lampovo</a></li>
+					<li><a href="{{ site.baseurl }}/categories/nyanyan">Nyanyan</a></li>
+					{% elsif page.category == 'Nyanyan' %}
+					<li><a href="{{ site.baseurl }}/categories/john-doe">John Doe</a></li>
+					<li><a href="{{ site.baseurl }}/categories/la-music">La Musique</a></li>
+					<li><a href="{{ site.baseurl }}/categories/lampovo">Lampovo</a></li>
+					<li><a href="{{ site.baseurl }}/categories/nyanyan" class="active">Nyanyan</a></li>
+					{% else %}
+					<li><a href="{{ site.baseurl }}/categories/john-doe">John Doe</a></li>
+					<li><a href="{{ site.baseurl }}/categories/la-music">La Musique</a></li>
+					<li><a href="{{ site.baseurl }}/categories/lampovo">Lampovo</a></li>
+					<li><a href="{{ site.baseurl }}/categories/nyanyan">Nyanyan</a></li>
+					{% endif %}
+				</ul>
+			</nav>
+		</aside>
+	</div>
+	{% include footer.html %}
+	{% include script.html %}
+</body>
+</html>
