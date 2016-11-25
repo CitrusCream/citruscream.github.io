@@ -11,6 +11,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - dev/
 
 defaults:
   -
