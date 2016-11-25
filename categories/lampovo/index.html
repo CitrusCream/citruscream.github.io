@@ -10,7 +10,11 @@ category: Lampovo
 		<hr>
 	</header>
 	{% if post.img %}
-	<img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_right">
+	{% if post.full-img %}
+	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_full"></a>
+	{% else %}
+	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_right"></a>
+	{% endif %}
 	{% endif %}
 	{{ post.content }}
 </article>
