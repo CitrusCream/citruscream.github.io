@@ -24,6 +24,7 @@ defaults:
       type: "posts"
     values:
       layout: "page"
+      comments: "true"
   -
     scope:
       path: "categories/john-doe"
