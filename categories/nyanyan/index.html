@@ -1,6 +1,6 @@
 ---
 layout: default
-category: Nyanyan
+category: lel
 ---
 {% for post in site.categories.nyanyan %}
 <article>
@@ -16,7 +16,7 @@ category: Nyanyan
 	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.img }}" alt="{{ post.img_alt }}" class="post-image post-image_right{% if post.full-img %} post-image_full{% endif %}"></a>
   {% endif %}
 	{% endif %}
-	{{ post.content }}
+	{{ post.excerpt }}
 </article>
 {% endfor %}
 
