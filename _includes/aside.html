@@ -1,0 +1,10 @@
+<aside>
+	<nav class="navigation"{% if page.img %} style="background: url('{{ site.url }}/{{ page.img  }}') no-repeat center; background-size: cover;"{% endif %}>
+		<ul>
+			<li><a href="{{ site.url }}/johndoe" id="johndoe"{% if page.category == "johndoe" %} class="active"{% endif %}><span>John Doe</span><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+			<li><a href="{{ site.url }}/lampovo" id="lampovo"{% if page.category == "lampovo" %} class="active"{% endif %}><span>Lampovo</span><i class="fa fa-music" aria-hidden="true"></i></a></li>
+			<li><a href="{{ site.url }}/lamusic" id="lamusic"{% if page.category == "lamusic" %} class="active"{% endif %}><span>La Musique</span><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a></li>
+			<li><a href="{{ site.url }}/nyanyan" id="nyanyan"{% if page.category == "nyanyan" %} class="active"{% endif %}><span>Nyanyan</span><i class="fa fa-venus" aria-hidden="true"></i></a></li>
+		</ul>
+	</nav>
+</aside>

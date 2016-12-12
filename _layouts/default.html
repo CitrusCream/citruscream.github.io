@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include head.html %}
+</head>
+<body>
+	<div class="aside-wrap">
+		{% include aside.html %}
+	</div>
+
+	<div class="page-wrapper">
+		{% include header.html %}
+		<main class="page-main pjax-container">
+			{{ content }}
+		</main>
+	</div>
+
+	{% include scripts.html %}
+
+</body>
+
+</html>

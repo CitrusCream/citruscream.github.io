@@ -1,0 +1,14 @@
+---
+layout: default
+comments: true
+---
+<article>
+	<header class="post-header">
+		<h2>{{ page.title }}</h2>
+		<p class="post-info">Posted on <time>{{ page.date | date: "%d-%m-%Y" }}</time> in <a href="{{ site.url }}/{{ page.category }}" class="category">{{ page.category }} <i class="fa fa-tag" aria-hidden="true"></i></a></p>
+		<hr>
+	</header>
+	<main class="post-main">
+		{{ page.content }}
+	</main>
+</article>
