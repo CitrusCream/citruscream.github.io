@@ -23,6 +23,13 @@ $(function() {
 
 	if(isMobile.any()) { $('aside').addClass('aside-mobile') };
 
+	var $grid = $('.nyan-grid').imagesLoaded(function() {
+		$grid.masonry({
+			itemSelector: '.nyan-item',
+			percentPosition: true
+		});
+	});
+
 	$(document).pjax('a, aside a, strong a button', '.pjax-container', {fragment: '.pjax-container'});
 
 	$('.pjax-container').on('pjax:success', function() {
@@ -30,21 +37,20 @@ $(function() {
 			url: window.location.href,
 			container: 'aside',
 			fragment: 'aside'
-		})
-	})
-
-	var asideWidth = $('aside').width(),
-	wrapperMargin  = $('.page-wrapper').css('marginLeft');
+		});
+	});
 
 	$('#resize').on('click', function() {
 
-		if($('aside').hasClass('animated')) {
-			$('aside').toggleClass('animated').animate({width:asideWidth},500);
-			$('.page-wrapper').animate({marginLeft:wrapperMargin},500);
+		if($('aside').hasClass('collapsed')) {
+			$('aside').toggleClass('collapsed').animate({width:'33vw'},500);
+			$('.page-wrapper').animate({marginLeft:'35vw'}, 500, function(){$grid.masonry()});
 		} else { 
-			$('aside').toggleClass('animated').animate({width:'50px'}, 500);
-			$('.page-wrapper').animate({marginLeft: '65px'}, 500);
-		}
+			$('aside').toggleClass('collapsed').animate({width:'50px'}, 500);
+			$('.page-wrapper').animate({marginLeft: '65px'}, 500, function(){$grid.masonry()});
+		};
+
+		$grid.masonry();
 
 	})
 
